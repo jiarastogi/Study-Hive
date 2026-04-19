@@ -6,4 +6,4 @@ Study Hive is a student-focused study and booking platform designed to make lear
 
 [View the project documentation (PDF)](docs/project-documentation.pdf)
 
-[View the public site hosted on GitHub Pages: https://jiarastogi.github.io/Study-Hive/]
+[View the public site hosted on GitHub Pages:] (https://jiarastogi.github.io/Study-Hive/)
