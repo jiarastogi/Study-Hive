@@ -1,0 +1,282 @@
+.container {
+    width: 60%;
+    margin: 0 auto; 
+}
+
+.grey {
+    background-color: #FFF9E9;
+    padding: 40px;
+}
+
+.white {
+    background-color: #ffffff;
+    padding: 40px;
+}
+
+
+.menu {
+    border-bottom:3px;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    border-style:solid;
+    border-color: #9BA7C0;
+    background-color:#242424;
+    padding: 10px;
+    margin:0;
+}
+
+.menu .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-nav {
+    display: flex;
+    gap: 40px;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.header-nav a {
+    text-decoration: none;
+    color: #FFF9E9;
+    font-family: 'Montserrat';
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.header-logo {
+    width: 15%;
+}
+
+.header-logo img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.footer {
+border-bottom:3px;
+border-top: 0px;
+border-left: 0px;
+border-right: 0px;
+background-color:#242424;
+padding: 40px;
+margin:0;
+align-items: flex-start;
+}
+
+.footer a {
+text-decoration: none;
+color: #FFF9E9;
+font-family: 'Montserrat';
+font-weight: 500;
+font-size: 16px;
+}
+
+.footer .container {
+display: flex;
+justify-content: space-between;
+}
+
+.footer-nav {
+display: flex;         
+flex-direction: column; 
+gap: 10px;          
+justify-content: flex-end;
+}
+
+
+.footer-logo {
+width: 15%;
+}
+
+.footer-logo img {
+max-width: 100%;
+height: auto;
+display: block;
+}
+
+.image-container {
+    display: flex;
+    justify-content: space-between; 
+    width: 60%;
+    margin: 0 auto; 
+    align-items:center;
+}
+
+.text-content {
+    width: 60%;
+    padding-right: 20px;
+}
+
+.image-content {
+    width: 40%;
+}
+
+.image-content img {
+    width: 100%; 
+    height: auto;
+}
+
+h1{
+    color:#9B510A;
+    font-family: 'Montserrat';
+    font-weight: 900;
+    font-size: 35px;
+    text-align:center;
+}
+
+p{
+    color:#242424;
+    font-family: 'Montserrat';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    text-align:left;
+}
+
+button{
+    color:#FFF9E9;
+    background-color:#9B510A;
+    font-family: 'Montserrat';
+    font-weight:700;
+    font-size:16px;
+    border-radius: 15px;
+    padding:15px;
+    margin-top:10px;
+    border-color: #242424;
+    border-style: solid;
+    border-width: 1px;
+    box-shadow: 0px 0px 10px rgba(51, 34, 25, 0.2);
+}
+
+.button:hover {
+    box-shadow: 0px 0px 15px rgba(51, 34, 25, 0.5);
+}
+
+.wrapper{
+    box-sizing: border-box;
+    background-color:#FFF9E9;
+    width:max(40%, 600px);
+    padding: 10px;
+    border-radius: 20px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+form{
+    width:min(400px, 100%);
+    margin-top: 20px;
+    margin-bottom:20px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    gap:10px;
+}
+
+form > div{
+    width:100px;
+    display:flex;
+    justify-content: center;
+}
+
+form label{
+    flex-shrink: 0;
+    height:50px;
+    width:50px;
+    background-color:#9B510A;
+    fill:#FFF9E9;
+    color:#FFF9E9;
+    border-radius:10px 0 0 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form input{
+    box-sizing:border-box;
+    flex-grow:1;
+    min-width:10;
+    height:50px;
+    padding:1em;
+    font:inherit;
+    border-radius:0 10px 10px 0;
+    border: 1.5px solid white;  
+    border-left:none;  
+    background-color:white;
+    transition: 150ems ease;
+        font-family: 'Montserrat', sans-serif;
+
+}
+
+form input:hover{
+    border-color: #9B510A;
+}
+
+form input:focus{
+    outline:none;
+    border-color: #332219;
+}
+
+div:has(input:focus) > label{
+    background-color:#332219;
+
+}
+
+form input::placeholder{
+    color:#242424;
+    opacity:1;
+    font-family: 'Montserrat', sans-serif;
+}
+
+form button{
+    border:none;
+    padding:.85em 3em;
+    cursor:pointer;
+    transition: 150ms ease;
+}
+
+form button:hover{
+    background-color: #332219;
+}
+
+form button:focus{
+    outline:none;
+    background-color:#332219;
+}
+
+@media(max-width:1100px){
+    .wrapper{
+        width:min(600px, 100%);
+        border-radius:0;
+    }
+}
+
+form div.incorrect label{
+    background-color:#f06272;
+}
+
+form div.incorrect input{
+    border-color:#f06272;
+}
+
+a{
+    text-decoration:none;
+}
+
+a:hover{
+    text-decoration:underline;
+}
+
+#error-message {
+    color: #f06272;
+    margin-top: 10px;
+    font-weight: bold;
+}

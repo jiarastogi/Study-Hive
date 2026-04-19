@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=0.1">
+        <title>Bookings</title>
+        <link rel="icon" href="favicon.png" type="image/x-icon">
+        <link rel="stylesheet" href="StyleSheet.css">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700;900&display=swap" rel="stylesheet">
+    </head>
+    <body style="margin:0;">
+        <div class="menu">
+            <div class="container">
+                <div class="header-logo">
+                    <img src="black_logo.png" alt="Study Hive logo with honeycomb design and slogan 'Bee in the Zone'">
+                </div>
+                <div class="header-nav">
+                    <a href="HomePage.html">Homepage</a>
+                    <a href="Instructions.html">How It Works</a>
+                    <a href="Bookings.html">Bookings</a>
+                    <a href="Login.html">Log In</a>
+                    <a href="Signup.html">Sign Up</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="intro">
+            <h1 style="color:#FFFDF7;">Bookings</h1>
+        </div>
+        
+        <div class="white">
+            <div class="container">
+                
+
+<div class="container">
+    <h2 style="text-align: center;">Book a Seminar Room</h2>
+</div>
+    <table class="timetable">
+        <thead>
+            <tr>
+                <th>Time</th>
+                <th>Monday</th>
+                <th>Tuesday</th>
+                <th>Wednesday</th>
+                <th>Thursday</th>
+                <th>Friday</th>
+            </tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td class="heading">Period 1</td>
+                    <td class="available" onclick="bookRoom(1, 'Monday')">4 available</td>
+                    <td class="available" onclick="bookRoom(1, 'Tuesday')">4 available</td>
+                    <td class="available" onclick="bookRoom(1, 'Wednesday')">4 available</td>
+                    <td class="available" onclick="bookRoom(1, 'Thursday')">4 available</td>
+                    <td class="available" onclick="bookRoom(1, 'Friday')">4 available</td>
+                </tr>
+                <tr>
+                    <td class="heading">Period 2</td>
+                    <td class="available" onclick="bookRoom(2, 'Monday')">4 available</td>
+                    <td class="available" onclick="bookRoom(2, 'Tuesday')">4 available</td>
+                    <td class="available" onclick="bookRoom(2, 'Wednesday')">4 available</td>
+                    <td class="available" onclick="bookRoom(2, 'Thursday')">4 available</td>
+                    <td class="available" onclick="bookRoom(2, 'Friday')">4 available</td>
+                </tr>
+                <tr>
+                    <td class="heading">Period 3</td>
+                    <td class="available" onclick="bookRoom(3, 'Monday')">4 available</td>
+                    <td class="available" onclick="bookRoom(3, 'Tuesday')">4 available</td>
+                    <td class="available" onclick="bookRoom(3, 'Wednesday')">4 available</td>
+                    <td class="available" onclick="bookRoom(3, 'Thursday')">4 available</td>
+                    <td class="available" onclick="bookRoom(3, 'Friday')">4 available</td>
+                </tr>
+                <tr>
+                    <td class="heading">Period 4</td>
+                    <td class="available" onclick="bookRoom(4, 'Monday')">4 available</td>
+                    <td class="available" onclick="bookRoom(4, 'Tuesday')">4 available</td>
+                    <td class="available" onclick="bookRoom(4, 'Wednesday')">4 available</td>
+                    <td class="available" onclick="bookRoom(4, 'Thursday')">4 available</td>
+                    <td class="available" onclick="bookRoom(4, 'Friday')">4 available</td>
+                </tr>
+                <tr>
+                    <td class="heading">Period 5</td>
+                    <td class="available" onclick="bookRoom(5, 'Monday')">4 available</td>
+                    <td class="available" onclick="bookRoom(5, 'Tuesday')">4 available</td>
+                    <td class="available" onclick="bookRoom(5, 'Wednesday')">4 available</td>
+                    <td class="available" onclick="bookRoom(5, 'Thursday')">4 available</td>
+                    <td class="available" onclick="bookRoom(5, 'Friday')">4 available</td>
+
+            </tr>
+        </tbody>
+    </table>
+<div id="bookingModal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeModal()">&times;</span>
+
+        <div class="modal-body">
+            <form id="bookingForm">
+                <h2>Select a Room</h2>
+                    <select id="room" name="room">
+                        <option value="Room 1">Room 1</option>
+                        <option value="Room 2">Room 2</option>
+                        <option value="Room 3">Room 3</option>
+                        <option value="Room 4">Room 4</option>
+                    </select>
+                    <br><br><input type="checkbox" id="TnC" name="TnC" value="Agreed">
+                    <label for="TnC">I agree to use this as a study space. Sleeping, gaming, graffiti, damage, or misuse of facilities is not allowed.</label><br>
+                    <p id="error-message" style="color: #f06272; display: none; font-weight:700;">You must agree to continue.</p>
+                <button type="submit">Confirm Booking</button>
+            </form>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+
+        <div class="footer">
+            <div class="container">
+                <div class="footer-logo">
+                    <img src="black_logo.png" alt="Study Hive logo with honeycomb design and slogan 'Bee in the Zone'">
+                </div>
+                
+                <div class="footer-nav">
+                    <a href="HomePage.html">Homepage</a>
+                    <a href="Instructions.html">How It Works</a>
+                    <a href="Bookings.html">Bookings</a>
+                    <a href="Login.html">Log In</a>
+                    <a href="Signup.html">Sign Up</a>
+                </div>
+
+                <div>
+                    <a style="color:white;">&copy; Study Hive  2025</a>
+                    <div style="text-align:center; margin-top:20px;">
+                        <button onclick="resetAvailability()">Reset Availability</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+                
+
+        <script src="Bookings.js"></script>
+
+    </body>
+</html>

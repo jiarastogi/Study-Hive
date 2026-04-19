@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=0.1">
+        <title>Study Hive</title>
+        <link rel="icon" href="favicon.png" type="image/x-icon">
+        <link rel="stylesheet" href="StyleSheet.css">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700;900&display=swap" rel="stylesheet">
+    </head>
+    <body style="margin:0;">
+        <div class="menu">
+            <div class="container">
+                <div class="header-logo">
+                    <img src="black_logo.png" alt="Study Hive logo with honeycomb design and slogan 'Bee in the Zone'">
+                </div>
+                <div class="header-nav">
+                    <a href="HomePage.html">Homepage</a>
+                    <a href="Instructions.html">How It Works</a>
+                    <a href="Bookings.html">Bookings</a>
+                    <a href="Login.html">Log In</a>
+                    <a href="Signup.html">Sign Up</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="intro">
+            <img src="black_logo.png" alt="Study Hive logo with honeycomb design and slogan 'Bee in the Zone'" style="margin-left: auto; margin-right: auto;  display: block;  width: 40%;">
+        </div>
+        
+        <div class="grey">
+            <div class="container">
+                <h2>Welcome to <b>Study Hive</b>.</h2>
+                <p>At Study Hive, we’ve created a simple, digital way for students to book seminar rooms, no more running to Ms Black! With just a few clicks, you can check room availability, book your spot, and focus on your studies.
+                    <br><br>Whether you need a quiet place to study solo or a space for a group project, Study Hive makes it easy as honey to find your perfect spot.</p>
+            </div>            
+        </div>
+
+        
+        <div class="white">
+            <div class="container">
+                <h2>About the Creator</h2>
+                <p>Study Hive was created by Jia Rastogi, a student who wanted to make room booking easier for everyone. As a student myself, I know how important it is to have access to a quiet, dedicated study space when you need it most – so I built this platform to help students like you!</p>
+            </div>
+        </div>
+
+        
+        <div class="grey">
+        <div class="container">
+            <h2>Frequently Asked Questions (FAQs)</h2>
+
+            <div class="faq-container">
+            <div class="faq-item">
+                <button class="faq-question">1. How do I book a room?</button>
+                <div class="faq-answer"><p>
+                    Simply log in, choose a room, select a date and time, and confirm your booking!
+                </p></div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">2. How many rooms are available?</button>
+                <div class="faq-answer"><p>
+                    There are 4 seminar rooms available for booking, so be sure to grab your spot early!
+                </p></div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">3. Can I book a room for more than one period?</button>
+                <div class="faq-answer"><p>
+                    No, rooms are only available for one period per day.
+                </p></div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">4. How far in advance can I book?</button>
+                <div class="faq-answer"><p>
+                    You can book a room up to 1 week in advance, so plan accordingly!
+                </p></div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">5. Can I book a room every day?</button>
+                <div class="faq-answer"><p>
+                    Some rooms are already reserved for recurring use by other students. Be sure to check availability!
+                </p></div>
+            </div>            
+            </div>
+        </div>
+        </div>
+
+
+        <div class="white">
+            <div class="container">
+                <h3>Bee in the Zone – Book Your Room Today!</h3>
+                <p style="text-align: center;">Ready to find your perfect study spot? <a href="Bookings.html"><b>Book your room now</a></b> and bee in the zone! 🐝</p>
+            </div>
+        </div>
+
+
+        <div class="footer">
+            <div class="container">
+                <div class="footer-logo">
+                    <img src="black_logo.png" alt="Study Hive logo with honeycomb design and slogan 'Bee in the Zone'">
+                </div>
+                
+                <div class="footer-nav">
+                    <a href="HomePage.html">Homepage</a>
+                    <a href="Instructions.html">How It Works</a>
+                    <a href="Bookings.html">Bookings</a>
+                    <a href="Login.html">Log In</a>
+                    <a href="Signup.html">Sign Up</a>
+                </div>
+
+                <div>
+                    <a style="color:white;">&copy; Study Hive  2025</a>
+                </div>
+            </div>
+        </div>
+  
+
+                 <script>
+document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.faq-question').forEach((question) => {
+        question.addEventListener('click', (e) => {
+            const faqAnswer = e.target.nextElementSibling;
+
+            document.querySelectorAll('.faq-answer').forEach((answer) => {
+                if (answer !== faqAnswer) {
+                    answer.style.maxHeight = null;
+                    answer.classList.remove('open');
+                }
+            });
+
+            document.querySelectorAll('.faq-question').forEach((q) => {
+                if (q !== e.target) {
+                    q.classList.remove('open');
+                }
+            });
+
+            faqAnswer.style.maxHeight = faqAnswer.classList.toggle('open') ? `${faqAnswer.scrollHeight + 20}px` : null;
+            e.target.classList.toggle('open');
+        });
+    });
+});
+         </script>
+
+    </body>
+</html>

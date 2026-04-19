@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=0.1">
+        <title>How It Works</title>
+        <link rel="icon" href="favicon.png" type="image/x-icon">
+        <link rel="stylesheet" href="StyleSheet.css">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700;900&display=swap" rel="stylesheet">
+    </head>
+    <body style="margin:0;">
+        <div class="menu">
+            <div class="container">
+                <div class="header-logo">
+                    <img src="black_logo.png" alt="Study Hive logo with honeycomb design and slogan 'Bee in the Zone'">
+                </div>
+                <div class="header-nav">
+                    <a href="HomePage.html">Homepage</a>
+                    <a href="Instructions.html">How It Works</a>
+                    <a href="Bookings.html">Bookings</a>
+                    <a href="Login.html">Log In</a>
+                    <a href="Signup.html">Sign Up</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="intro">
+            <h1 style="color:#FFFDF7;">How It Works</h1>
+        </div>
+        
+        <div class="grey">
+            <div class="container">
+                <p>Booking a seminar room at Study Hive is simple and quick. Just follow these easy steps:</p>
+                    <li><b>Login:</b> Enter your details to access the booking system.</li>
+                    <li><b>Select the Date and Period:</b> Pick your preferred date and the time slot that works for you.</li>
+                    <li><b>Choose a Room:</b> Select which of the 4 available seminar rooms you’d like to book.</li>
+                    <li><b>Confirm Your Booking:</b> Check everything is correct and confirm your reservation!</li>
+                <p>With real-time availability, you’ll see exactly which rooms are free at the times you need. We make it easy to find and book the perfect study space without the hassle!</p>
+            </div>            
+        </div>
+
+        
+        <div class="white">
+            <div class="container">
+                <h2>Important Info:</h2>
+                <p>Limited Rooms: There are only 4 rooms to choose from, so book early!
+                <br><br>One Booking Per Day: You can only book a room for one period per day.
+                <br><br>Recurring Bookings: Some rooms are already reserved for recurring use. Be sure to check availability.
+                <br><br>Bookings for only the Current Week: You can only book a room for the current week. Plan ahead and snag your spot!
+                </p>
+            </div>
+        </div>
+
+         
+        <div class="grey">
+        <div class="container">
+            <h2>Frequently Asked Questions (FAQs)</h2>
+
+            <div class="faq-container">
+            <div class="faq-item">
+                <button class="faq-question">1. Can I cancel my booking?</button>
+                <div class="faq-answer"><p>
+                    No, unfortunately you are unable to cancel a booking, unless you directly speak to Ms Black. This functionality hasn't been built into the software solution yet, but it's coming soon!
+                </p></div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">2. What if all rooms are booked?</button>
+                <div class="faq-answer"><p>
+                    If rooms are fully booked, you can check back the next day or look for another time that’s available!
+                </p></div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">3. Can I book the room for multiple days in a row?</button>
+                <div class="faq-answer"><p>
+                    Unfortunately, you can only book the room for one period per day. But don’t worry, there’s always another day to book!
+                </p></div>
+            </div>
+            </div>
+        </div>
+        </div>
+
+
+        <div class="white">
+            <div class="container">
+                <h3>Bee in the Zone – Book Your Room Today!</h3>
+                <p style="text-align: center;">Ready to bee productive? <b><a href="Bookings.html">Log in</a></b> and book your room today! 🐝</p>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="container">
+                <div class="footer-logo">
+                    <img src="black_logo.png" alt="Study Hive logo with honeycomb design and slogan 'Bee in the Zone'">
+                </div>
+                
+                <div class="footer-nav">
+                    <a href="HomePage.html">Homepage</a>
+                    <a href="Instructions.html">How It Works</a>
+                    <a href="Bookings.html">Bookings</a>
+                    <a href="Login.html">Log In</a>
+                    <a href="Signup.html">Sign Up</a>
+                </div>
+
+                <div>
+                    <a style="color:white;">&copy; Study Hive  2025</a>
+                </div>
+            </div>
+        </div>
+                
+
+
+                 <script>
+document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.faq-question').forEach((question) => {
+        question.addEventListener('click', (e) => {
+            const faqAnswer = e.target.nextElementSibling;
+
+            document.querySelectorAll('.faq-answer').forEach((answer) => {
+                if (answer !== faqAnswer) {
+                    answer.style.maxHeight = null;
+                    answer.classList.remove('open');
+                }
+            });
+
+            document.querySelectorAll('.faq-question').forEach((q) => {
+                if (q !== e.target) {
+                    q.classList.remove('open');
+                }
+            });
+
+            faqAnswer.style.maxHeight = faqAnswer.classList.toggle('open') ? `${faqAnswer.scrollHeight + 20}px` : null;
+            e.target.classList.toggle('open');
+        });
+    });
+});
+         </script>
+
+    </body>
+</html>
